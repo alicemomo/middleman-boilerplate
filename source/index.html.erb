@@ -1,10 +1,111 @@
 ---
-title: Le Wagon Middleman boilerplate
+title: My project
 ---
 
-<div class="welcome text-center padded">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div class="banner text-center" style = "background-image: url('images/background.jpg')">
+      <div class="banner-shadow"></div>
+      <h1>Startup tools</h1>
+      <h2>Very cool stuff, useful and smart</h2>
+      <a class="btn btn-primary" href="#" role="button">GET IT</a>
+    </div>
+    <div class="padded">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <div class="features">
+              <h3><%= image_tag "chat.png" %>Discuss best tools</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fuga eum, corporis vel incidunt odit maxime architecto earum quae. In voluptatum ipsa, ducimus illo! Quidem repellendus error, magni. Odit, ut.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="features">
+              <h3><%= image_tag "phone.png" %>Always in sync</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique incidunt aperiam fuga nihil voluptatem eos soluta sed numquam! Nostrum officiis minima, quia eveniet modi eaque ut explicabo, reprehenderit libero impedit.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="features">
+              <h3><%= image_tag "search.png" %>Powerful search</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eligendi facilis a provident quia quas ut, explicabo ex harum dolorem, non eveniet adipisci tempora consequatur commodi fugiat nihil minima, possimus?</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="features">
+              <h3><%= image_tag "heart.png" %>Share the love</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime asperiores perspiciatis debitis enim, officiis repellat, tempora magnam illum cumque commodi dolorum quidem fuga numquam, consectetur tenetur, ratione laudantium aut veritatis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="padded">
+      <h2 class="section-header text-center">Most Popular</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <div class="card">
+              <div id="card-label">
+                <p>POPULAR</p>
+              </div>
+              <div id="card-text">
+                <h3>Trello</h3>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card">
+              <div id="card-label">
+                <p>POPULAR</p>
+              </div>
+              <div id="card-text">
+                <h3>Intercom</h3>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card">
+              <div id="card-label">
+                <p>POPULAR</p>
+              </div>
+              <div id="card-text">
+                <h3>Mixpanel</h3>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="newsletter text-center padded">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get stylus news</p>
+      <form class="form-inline">
+        <input type="email" class="form-control" placeholder="alice@lewagon.org">
+        <button type="submit" class="btn btn-primary">Suscribe</button>
+    </div>
+    <div class="map padded">
+      <div id="map" style="width: 100%; height: 400px;"></div>
+
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+      <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}] // TODO: replace [] by array from https://snazzymaps.com/
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+      </script>
+    </div>
