@@ -1,0 +1,39 @@
+.card {
+  background-image: url("../images/startup.jpg");
+  background-size: cover;
+  height: 200px;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px #BBBBBB;
+  h2{
+    line-height: 15px;
+  }
+  h3{
+    font-family: $header-font;
+    font-weight: light;
+    font-size: 24px;
+  }
+  a {
+    color: white;
+    &:hover {
+    color: $violet;
+    text-decoration: none;
+    }
+  }
+}
+
+#card-label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+  }
+
+#card-text {
+  position: absolute;
+  bottom: 8px;
+  left: 5px;
+}
+
