@@ -4,9 +4,12 @@
   padding-top: 30px;
   color: #D4D4D4;
   li a {
-  color: #D4D4D4;
-  font-size: 30px;
-}
+    color: #D4D4D4;
+    font-size: 30px;
+    &:hover {
+      color: $violet;
+  }
+  }
 }
 
 .text-margin {

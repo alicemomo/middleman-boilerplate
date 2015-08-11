@@ -1,4 +1,10 @@
-- name: Some product
-  image: some_product.png
-- name: Other product
-  image: other_product.png
+- name: Trello
+  label: POPULAR
+  description: Very cool stuff, useful and smart
+- name: Intercom
+  label: POPULAR
+  description: Very cool stuff, useful and smart
+- name: Mixpanel
+  label: POPULAR
+  description: Very cool stuff, useful and smart
+
