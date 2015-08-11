@@ -13,30 +13,14 @@ title: My project
     <div class="top-padded">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-3">
-            <div class="features">
-              <h3><%= image_tag "chat.png" %>Discuss best tools</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fuga eum, corporis vel incidunt odit maxime architecto earum quae. In voluptatum ipsa, ducimus illo! Quidem repellendus error, magni. Odit, ut.</p>
+          <% data.features.each do |feature| %>
+            <div class="col-xs-12 col-md-3">
+              <div class="features">
+                <h3><%= image_tag feature.picture %><%= feature.title %></h3>
+                <p><%= feature.description %></p>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="features">
-              <h3><%= image_tag "phone.png" %>Always in sync</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique incidunt aperiam fuga nihil voluptatem eos soluta sed numquam! Nostrum officiis minima, quia eveniet modi eaque ut explicabo, reprehenderit libero impedit.</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="features">
-              <h3><%= image_tag "search.png" %>Powerful search</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eligendi facilis a provident quia quas ut, explicabo ex harum dolorem, non eveniet adipisci tempora consequatur commodi fugiat nihil minima, possimus?</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="features">
-              <h3><%= image_tag "heart.png" %>Share the love</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime asperiores perspiciatis debitis enim, officiis repellat, tempora magnam illum cumque commodi dolorum quidem fuga numquam, consectetur tenetur, ratione laudantium aut veritatis.</p>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -44,45 +28,21 @@ title: My project
       <h2 class="section-header text-center">Most Popular</h2>
       <div class="container">
         <div class="row">
+          <% data.products.each do |product| %>
           <div class="col-xs-12 col-md-4">
-            <div class="card">
-              <div id="card-label">
-                <p>POPULAR</p>
-              </div>
-              <div id="card-text">
-                <% link_to "" do %>
-                  <h3>Trello</h3>
-                  <p>Very cool stuff, useful and smart</p>
-                <% end %>
+              <div class="card" data-sr="ease-in-out 100px, over 1.5s">
+                <div id="card-label">
+                  <p><%= product.label %></p>
+                </div>
+                <div id="card-text">
+                  <% link_to "" do %>
+                    <h3><%= product.name %></h3>
+                    <p><%= product.description %></p>
+                  <% end %>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <div class="card">
-              <div id="card-label">
-                <p>POPULAR</p>
-              </div>
-              <div id="card-text">
-                <% link_to "" do %>
-                  <h3>Intercom</h3>
-                  <p>Very cool stuff, useful and smart</p>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <div class="card">
-              <div id="card-label">
-                <p>POPULAR</p>
-              </div>
-              <div id="card-text">
-                <% link_to "" do %>
-                  <h3>Mixpanel</h3>
-                  <p>Very cool stuff, useful and smart</p>
-                <% end %>
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -115,5 +75,9 @@ title: My project
         map: map,
         title: "You are here!"
       });
+      </script>
+      <script src='/js/scrollReveal.min.js'></script>
+      <script>
+        window.sr = new scrollReveal();
       </script>
     </div>
