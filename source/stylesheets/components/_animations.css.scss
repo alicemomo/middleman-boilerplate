@@ -1,0 +1,45 @@
+@keyframes fadeInAndSlideDown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes fadeInAndSlideDown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@-moz-keyframes fadeInAndSlideDown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+
+.fadeInAndSlideDown {
+  /* animation: animationName duration delay easing forwards; */
+  opacity: 0;
+  margin-top: -50px;
+  animation: fadeInAndSlideDown 3s 1s ease forwards;
+  -webkit-animation: fadeInAndSlideDown 3s 1s ease forwards;
+  -moz-animation: fadeInAndSlideDown 3s 1s ease forwards;
+}
